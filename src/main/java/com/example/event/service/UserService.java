@@ -22,7 +22,7 @@ public class UserService {
         User user = new User();
         user.setEmail(email);
         user.setPassword(encoder.encode(password));
-        user.setRole("USER");
+        user.setRole("ADMIN");
         return userRepo.save(user);
     }
 
