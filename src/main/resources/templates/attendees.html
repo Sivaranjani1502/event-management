@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Attendees</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+
+<body>
+
+<div class="hero-header">
+    <h1 th:text="${event.title}">Event Attendees</h1>
+    <p>Registered Participants</p>
+</div>
+
+<div class="center-box" style="max-width: 600px;">
+
+    <h2>Attendees</h2>
+
+    <table style="width:100%; text-align:left; border-collapse: collapse;">
+        <tr style="font-weight:bold;">
+            <th>Email</th>
+        </tr>
+
+        <tr th:each="email : ${emails}">
+            <td>[[${email}]]</td>
+        </tr>
+    </table>
+
+    <br>
+    <a href="/admin/dashboard">Back to Dashboard</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Edit Event</title>
+  <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+
+<body>
+
+<div class="hero-header">
+  <h1>Edit Event</h1>
+</div>
+
+<div class="center-box">
+
+  <form th:action="@{/admin/events/update}" method="post">
+
+    <input type="hidden" th:value="${event.id}" name="id">
+
+    <label>Title</label>
+    <input type="text" name="title" th:value="${event.title}" required>
+
+    <label>Description</label>
+    <input type="text" name="description" th:value="${event.description}" required>
+
+    <label>Venue</label>
+    <input type="text" name="venue" th:value="${event.venue}" required>
+
+    <label>Date</label>
+    <input type="date" name="date" th:value="${event.date}" required>
+
+    <label>Speaker</label>
+    <input type="text" name="speaker" th:value="${event.speaker}">
+
+    <label>Capacity</label>
+    <input type="number" name="capacity" th:value="${event.capacity}" required>
+
+    <button class="btn-primary" type="submit">Update</button>
+
+  </form>
+
+  <a href="/admin/dashboard">Back</a>
+</div>
+
+</body>
+</html>

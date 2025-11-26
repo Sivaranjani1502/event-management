@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Details</title>
+  <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+
+<body>
+
+<div class="hero-header">
+  <h1 th:text="${event.title}"></h1>
+  <p>Event Details</p>
+</div>
+
+<div class="center-box" style="max-width:700px;">
+  <p><b>Date:</b> [[${event.date}]]</p>
+  <p><b>Venue:</b> [[${event.venue}]]</p>
+  <p><b>Speaker:</b> [[${event.speaker}]]</p>
+  <p><b>Description:</b> [[${event.description}]]</p>
+
+  <form th:action="@{'/events/register/' + ${event.id}}" method="post">
+    <button class="btn-primary" type="submit">Register</button>
+  </form>
+
+  <a href="/events">Back to Events</a>
+</div>
+
+</body>
+</html>

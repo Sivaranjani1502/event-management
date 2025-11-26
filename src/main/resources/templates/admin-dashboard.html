@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+
+<body>
+
+<div class="hero-header">
+  <h1>Admin Dashboard</h1>
+  <p>Manage All Events</p>
+</div>
+
+<div style="max-width:900px;margin:0 auto;">
+  <a href="/admin/events/create" class="btn-primary" style="display:block;width:200px;margin-bottom:20px;text-align:center;">Create Event</a>
+
+  <div th:each="event : ${events}" style="background:white;padding:20px;margin-bottom:20px;border-radius:16px;box-shadow:0 5px 20px rgba(0,0,0,0.1);">
+
+    <h2>[[${event.title}]]</h2>
+    <p><b>Date:</b> [[${event.date}]]</p>
+    <p><b>Venue:</b> [[${event.venue}]]</p>
+
+    <a th:href="@{'/admin/events/edit/' + ${event.id}}">Edit</a> |
+    <a th:href="@{'/admin/events/delete/' + ${event.id}}" style="color:red;">Delete</a> |
+    <a th:href="@{'/admin/events/' + ${event.id} + '/attendees'}">View Attendees</a>
+  </div>
+</div>
+
+</body>
+</html>

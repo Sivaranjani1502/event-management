@@ -1,0 +1,108 @@
+/* ===== Clean Modern Gradient Header Theme ===== */
+
+:root {
+  --gradient-start: rgb(223, 232, 121);
+  --gradient-end: rgb(198, 233, 150);
+  --text-dark: #1c1c1c;
+  --text-light: white;
+  --box-bg: white;
+  --box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  --radius: 16px;
+
+  font-family: "Inter", "Poppins", system-ui, sans-serif;
+}
+
+/* ------ PAGE RESET ------ */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #f7f3ff;
+}
+
+/* ------ BIG HEADER ------ */
+.hero-header {
+  width: 100%;
+  padding: 80px 0;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  text-align: center;
+  color: var(--text-light);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  margin-bottom: 40px;
+}
+
+.hero-header h1 {
+  font-size: 42px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero-header p {
+  margin-top: 12px;
+  font-size: 20px;
+  opacity: 0.9;
+}
+
+/* ------ WHITE LOGIN BOX ------ */
+.center-box {
+  max-width: 480px;
+  background: var(--box-bg);
+  padding: 40px;
+  margin: 0 auto;
+  border-radius: var(--radius);
+  box-shadow: var(--box-shadow);
+  text-align: center;
+}
+
+.center-box h2 {
+  margin-bottom: 24px;
+  color: var(--text-dark);
+  font-size: 26px;
+}
+
+/* Inputs */
+.center-box label {
+  display: block;
+  text-align: left;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: var(--text-dark);
+}
+
+.center-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 18px;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+/* Button */
+.btn-primary {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  font-weight: 700;
+  font-size: 16px;
+  cursor: pointer;
+  background: linear-gradient(90deg, var(--gradient-start), var(--gradient-end));
+  color: white;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+/* Links */
+.center-box a {
+  color: rgb(205, 217, 57);
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 14px;
+}
+
+.center-box a:hover {
+  text-decoration: underline;
+}

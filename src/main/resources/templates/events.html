@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="hero-header">
+    <h1>Explore Events</h1>
+    <p>Find your next experience</p>
+</div>
+
+<div style="max-width: 900px; margin: 0 auto;">
+
+	<!-- Success: event registered -->
+	<div th:if="${param.registered}" 
+	     style="background:#d4edda;color:#155724;padding:15px;border-radius:10px;margin-bottom:20px;font-weight:bold;">
+	    Event registered successfully!
+	</div>
+
+	<!-- Success: email sent -->
+	<div th:if="${param.emailSent}" 
+	     style="background:#cce5ff;color:#004085;padding:15px;border-radius:10px;margin-bottom:20px;font-weight:bold;">
+	    Email confirmation sent. Check your inbox!
+	</div>
+
+    <!-- SEARCH + FILTER FORM -->
+    <form th:action="@{/events}" method="get" style="margin-bottom: 20px; text-align: center;">
+
+        <input type="text" name="keyword" placeholder="Search by title or venue"
+               style="padding: 12px; width: 50%; border-radius: 10px; border: 1px solid #ccc; margin-right: 10px;">
+
+        <input type="date" name="date"
+               style="padding: 12px; border-radius: 10px; border: 1px solid #ccc; margin-right: 10px;">
+
+        <button class="btn-primary" style="width: 160px;" type="submit">Search</button>
+    </form>
+
+    <!-- EVENTS LIST -->
+    <div th:each="event : ${events}"
+         style="background:white; padding: 20px; margin-bottom: 20px; border-radius: 16px;
+                box-shadow: 0 5px 25px rgba(0,0,0,0.1);">
+
+        <h2>[[${event.title}]]</h2>
+        <p><b>Date:</b> [[${event.date}]]</p>
+        <p><b>Venue:</b> [[${event.venue}]]</p>
+
+        <a th:href="@{'/events/' + ${event.id}}" style="color: rgb(205, 217, 57); font-weight: bold;">
+            View Details
+        </a>
+    </div>
+
+</div>
+<script>
+    // Show popup if email sent
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.has("emailSent")) {
+        const toast = document.createElement("div");
+        toast.innerText = "📨 Email confirmation sent!";
+        toast.style.position = "fixed";
+        toast.style.bottom = "30px";
+        toast.style.right = "30px";
+        toast.style.background = "linear-gradient(90deg, rgb(223,232,121), rgb(198,233,150))";
+        toast.style.padding = "15px 25px";
+        toast.style.borderRadius = "12px";
+        toast.style.boxShadow = "0 5px 20px rgba(0,0,0,0.2)";
+        toast.style.color = "black";
+        toast.style.fontWeight = "bold";
+        toast.style.fontSize = "16px";
+        toast.style.opacity = "0";
+        toast.style.transition = "opacity 0.5s";
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => toast.style.opacity = "1", 200);
+
+        setTimeout(() => toast.style.opacity = "0", 3500);
+    }
+</script>
+
+</body>
+</html>

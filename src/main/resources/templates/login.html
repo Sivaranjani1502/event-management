@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Management Login</title>
+  <link rel="stylesheet" th:href="@{/styles.css}">
+</head>
+
+<body>
+
+<div class="hero-header">
+  <h1>Event Management System</h1>
+  <p>Your Gateway to Amazing Events</p>
+</div>
+
+<div class="center-box">
+  <h2>Login</h2>
+
+  <div th:if="${error}" style="color:red;margin-bottom:10px;">[[${error}]]</div>
+  <div th:if="${message}" style="color:green;margin-bottom:10px;">[[${message}]]</div>
+
+  <form th:action="@{/login}" method="post">
+    <label>Email</label>
+    <input type="email" name="username" required>
+
+    <label>Password</label>
+    <input type="password" name="password" required>
+
+    <button class="btn-primary" type="submit">Login</button>
+  </form>
+
+  <a href="/register">Don’t have an account? Register</a>
+</div>
+
+</body>
+</html>
