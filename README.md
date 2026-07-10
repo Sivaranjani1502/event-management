@@ -53,7 +53,6 @@ git clone https://github.com/Sivaranjani1502/event-management.git
 <img width="2880" height="1704" alt="Screenshot 2025-11-26 221803" src="https://github.com/user-attachments/assets/406fcc61-a872-4652-bf0c-ab38545b922a" />
 <img width="2880" height="1704" alt="Screenshot 2025-11-26 221906" src="https://github.com/user-attachments/assets/9ccfa91b-b521-410b-9820-214b0944645c" />
 <img width="2880" height="1704" alt="Screenshot 2025-11-26 221932" src="https://github.com/user-attachments/assets/f106863c-c62f-4c04-bf29-4ef80b28b047" />
-<img width="2880" height="1704" alt="Screenshot 2025-11-26 221946" src="https://github.com/user-attachments/assets/b243f070-cd08-4a41-a490-21a56da2aa4c" />
 
 
 ## Future Improvements
