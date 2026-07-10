@@ -46,7 +46,15 @@ git clone https://github.com/Sivaranjani1502/event-management.git
 
 ## Screenshots
 
-*(Add 2-3 screenshots here — login screen, event listing, admin panel)*
+<img width="2880" height="1704" alt="Screenshot 2025-11-26 190127" src="https://github.com/user-attachments/assets/2ff6321d-62b8-47ca-a43a-d21adac3b469" />
+<img width="2880" height="1704" alt="Screenshot 2025-11-26 221729" src="https://github.com/user-attachments/assets/3593f551-5b50-4eb2-b6f9-a5c1e70a0434" />
+<img width="2880" height="1704" alt="Screenshot 2025-11-26 221739" src="https://github.com/user-attachments/assets/d5fbb971-0fc5-4de6-b5c5-904d0d918235" />
+<img width="2880" height="1704" alt="Screenshot 2025-11-26 221756" src="https://github.com/user-attachments/assets/8313a232-4193-4926-8b05-39842c969b71" />
+<img width="2880" height="1704" alt="Screenshot 2025-11-26 221803" src="https://github.com/user-attachments/assets/406fcc61-a872-4652-bf0c-ab38545b922a" />
+<img width="2880" height="1704" alt="Screenshot 2025-11-26 221906" src="https://github.com/user-attachments/assets/9ccfa91b-b521-410b-9820-214b0944645c" />
+<img width="2880" height="1704" alt="Screenshot 2025-11-26 221932" src="https://github.com/user-attachments/assets/f106863c-c62f-4c04-bf29-4ef80b28b047" />
+<img width="2880" height="1704" alt="Screenshot 2025-11-26 221946" src="https://github.com/user-attachments/assets/b243f070-cd08-4a41-a490-21a56da2aa4c" />
+
 
 ## Future Improvements
 
